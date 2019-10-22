@@ -1,4 +1,4 @@
-Follow along with this tutorial
+Follow along with this tutorial - and some extra styling practice too!
 https://www.youtube.com/watch?v=T3Px88x_PsA&list=PLN3n1USn4xlntqksY83W3997mmQPrUmqM&index=13
 
 
