@@ -5,11 +5,22 @@ import FetchRandomUser from './components/FetchRandomUser'
 function App() {
   return (
     <React.Fragment>
-      <div className="App">
-        <FetchRandomUser />
-      </div>
-      <div className="App">
-        <FetchRandomUser />
+      <div className="Grid">
+        <div className="Row">
+          <div className="User"><FetchRandomUser /></div>
+          <div className="User"><FetchRandomUser /></div>
+          <div className="User"><FetchRandomUser /></div>
+        </div>
+        <div className="Row">
+          <div className="User"><FetchRandomUser /></div>
+          <div className="User"><FetchRandomUser /></div>
+          <div className="User"><FetchRandomUser /></div>
+        </div>
+        <div className="Row">
+          <div className="User"><FetchRandomUser /></div>
+          <div className="User"><FetchRandomUser /></div>
+          <div className="User"><FetchRandomUser /></div>
+        </div>
       </div>
     </React.Fragment>
   );
