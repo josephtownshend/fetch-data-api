@@ -18,18 +18,21 @@ export default class FetchRandomUser extends React.Component {
 
 
   render() {
+
+    if (this.state.loading) {
+      return <div>loading...</div>
+    }
+
+    if (!this.state.person) {
+      return <div>no person found...</div>
+    }
+    
     return (
       <div>
-        {this.state.loading || !this.state.person ?  (
-          <div>loading...</div>
-        ) : (
-          <div>
-            <div>{this.state.person.name.title}</div>
-            <div>{this.state.person.name.first}</div>
-            <div>{this.state.person.name.last}</div>
-            <img src={this.state.person.picture.large} />
-          </div>
-        )}
+        <div>{this.state.person.name.title}</div>
+        <div>{this.state.person.name.first}</div>
+        <div>{this.state.person.name.last}</div>
+        <img src={this.state.person.picture.large} />
       </div>
     );
   }
