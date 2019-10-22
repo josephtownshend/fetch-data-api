@@ -4,9 +4,14 @@ import FetchRandomUser from './components/FetchRandomUser'
 
 function App() {
   return (
-    <div className="App">
-      <FetchRandomUser />
-    </div>
+    <React.Fragment>
+      <div className="App">
+        <FetchRandomUser />
+      </div>
+      <div className="App">
+        <FetchRandomUser />
+      </div>
+    </React.Fragment>
   );
 }
 
