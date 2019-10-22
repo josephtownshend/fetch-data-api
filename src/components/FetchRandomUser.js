@@ -7,7 +7,12 @@ export default class FetchRandomUser extends React.Component {
   }
 
 
-  componentDidMount() {}
+  async componentDidMount() {
+    const url = "https://api.randomuser.me/";
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+  }
 
 
 
