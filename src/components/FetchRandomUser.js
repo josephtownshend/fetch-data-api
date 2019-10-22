@@ -7,13 +7,15 @@ export default class FetchRandomUser extends React.Component {
   }
 
 
-  componentDidMount() {
+  componentDidMount() {}
 
-  }
+
 
   render() {
-    return <div>
-      {this.state.loading ? <div>loading...</div> : <div>person...</div>}
-    </div>;
+    return (
+      <div>
+        {this.state.loading ? <div>loading...</div> : <div>person...</div>}
+      </div>
+    );
   }
 }
