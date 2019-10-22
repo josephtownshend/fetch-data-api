@@ -24,6 +24,7 @@ export default class FetchRandomUser extends React.Component {
           <div>loading...</div>
         ) : (
           <div>
+            <div>{this.state.person.name.title}</div>
             <div>{this.state.person.name.first}</div>
           </div>
         )}
