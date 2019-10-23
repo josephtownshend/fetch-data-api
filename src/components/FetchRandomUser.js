@@ -6,7 +6,7 @@ export default class FetchRandomUser extends React.Component {
 // state 'person' is null by default as we havent requested one on page load.
   state = {
     loading: true,
-    person: null
+    people: []
   };
 
 // this is fetching data.
@@ -22,7 +22,7 @@ export default class FetchRandomUser extends React.Component {
     // as 'fetch' is async we use 'await'.
     const data = await response.json();
     // setting state of 'person' here and changing loading to 'false'
-    this.setState({ person: data.results[0], loading: false })
+    this.setState({ people: data.results, loading: false })
   }
 
   render() {
@@ -31,16 +31,20 @@ export default class FetchRandomUser extends React.Component {
       return <div>loading...</div>
     }
 
-    if (!this.state.person) {
+    if (!this.state.people.length) {
       return <div>no person found...</div>
     }
 
     return (
       <div>
-        <div>{this.state.person.name.title}</div>
-        <div>{this.state.person.name.first}</div>
-        <div>{this.state.person.name.last}</div>
-        <img src={this.state.person.picture.large} alt="profile shot"/>
+        {this.state.people.map(person => (
+          <div>
+            <div>{person.name.title}</div>
+            <div>{person.name.first}</div>
+            <div>{person.name.last}</div>
+            <img src={person.picture.large} alt="profile shot"/>
+          </div>
+        ))}
       </div>
     );
   }

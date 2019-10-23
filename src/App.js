@@ -8,18 +8,6 @@ function App() {
       <div className="Grid">
         <div className="Row">
           <div className="User"><FetchRandomUser /></div>
-          <div className="User"><FetchRandomUser /></div>
-          <div className="User"><FetchRandomUser /></div>
-        </div>
-        <div className="Row">
-          <div className="User"><FetchRandomUser /></div>
-          <div className="User"><FetchRandomUser /></div>
-          <div className="User"><FetchRandomUser /></div>
-        </div>
-        <div className="Row">
-          <div className="User"><FetchRandomUser /></div>
-          <div className="User"><FetchRandomUser /></div>
-          <div className="User"><FetchRandomUser /></div>
         </div>
       </div>
     </React.Fragment>
