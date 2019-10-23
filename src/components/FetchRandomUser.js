@@ -13,7 +13,7 @@ export default class FetchRandomUser extends React.Component {
 // we are making this function asynchronous as we have used 'fetch'.
   async componentDidMount() {
     // storing our URL in a const.
-    const url = "https://api.randomuser.me/";
+    const url = "https://api.randomuser.me/?results=9";
     // this is 'fetching' our data and storing it in 'response'.
     // 'fetch' is an asynchronous function so we need to use 'await'.
     // it will wait for the 'async' call to finish then store in 'response'.
